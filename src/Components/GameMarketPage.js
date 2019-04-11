@@ -43,13 +43,16 @@ class GameMarketPage extends Component {
 
   render () {
     return (
-    <div className="container upload-image">
-      <div className="row">
-        
-          <div className="market-header">
+    <div className=" upload-image row">
+      {/* <div className="col-2 sidebar-game">
+        <img src="/assets/sidebar.jpeg" alt="sidebar"/>
+      </div> */}
+      <div className="row col-12">
+          <div className="market-header col-12">
             <h3>פרסם לקהל היעד שלך</h3>
           </div>
           <hr />
+        
           <form className="row col-12 main-form" onSubmit={this.handleSubmit}>
             <div className="form-group form-group-sm col-sm-8">
               <div className="row">
@@ -124,7 +127,7 @@ class GameMarketPage extends Component {
             </div>
             <div className="form-group form-group-sm col-sm-8">
               <div className="row">
-                <label forhtml="finance" className="col-sm-4 col-form-label">תקציב:</label>
+                <label forhtml="finance" className="col-sm-4 col-form-label">תקציב חודשי:</label>
                 <div className="col-sm-8">
                   <input className="form-control"id="finance"/>
                 </div>

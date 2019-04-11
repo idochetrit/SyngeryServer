@@ -132,6 +132,11 @@ a.nav-link {
   font-size: 24px;
   font-weight: bold;
 }
+
+.sidebar-game {
+  margin-top: -30px;
+  margin-left: -9px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
