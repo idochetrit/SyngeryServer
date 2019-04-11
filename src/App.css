@@ -98,7 +98,7 @@ a.nav-link {
 
 .dropzone-wrapper {
   border-style: dashed;
-  height: 150px;
+  height: 100px;
   width: 520px;
   margin: 0 auto;
   border-color: rgb(218,140,74);
@@ -119,7 +119,7 @@ a.nav-link {
 }
 
 .form-check-label {
-  padding-right: 5px;
+  padding-right: 2px;
 }
 
 .desc-textarea {

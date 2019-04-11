@@ -35,6 +35,9 @@ class GameMarketPage extends Component {
       method: 'POST',
       body: data,
     });
+    this.setState({
+      files: []
+     });
   }
 
 
@@ -74,7 +77,7 @@ class GameMarketPage extends Component {
               <div className="row">
                 <label forhtml="desc" className="col-sm-4 col-form-label">תיאור:</label>
                 <div className="col-sm-8">
-                  <textarea className="form-control desc-textarea" rows="5" id="desc"></textarea>
+                  <textarea className="form-control desc-textarea" rows="2" id="desc"></textarea>
                 </div>
               </div>
             </div>
