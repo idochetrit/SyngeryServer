@@ -7,18 +7,29 @@ router.get("/image", function (req, res) {
   const image = "../../assets/images/image1.jpeg";
 
   res.set("Content-Type", "image/jpeg");
+  res.set("Cache-Control", "no-cache, no-store, must-revalidate");
   const imageFile = path.join(__dirname, image);
   res.sendFile(imageFile, {}, (err) => {
-    console.log(`unable to fetch image, with: ${err}`);
+    if (err)
+      console.log(`unable to fetch image, with: ${err}`);
   });
 });
 
-router.get("/video", async function (req, res) {
-  const image = "../../assets/videos/McDonalds.mp4";
+const BASE_ASSETS = "../../assets/videos/";
+const VIDEOS = {
+  V1: "mc.mp4",
+  V2: "McDonalds.mp4"
+};
 
+let currentImage = VIDEOS.V2;
+
+router.get("/video", function (req, res) {
+  res.set("Cache-Control", "no-cache, no-store, must-revalidate");
   res.set("Content-Type", "video/mp4");
-  const imageFile = path.join(__dirname, image);
-  await res.sendFile(imageFile, {}, (err) => {
+
+  console.log(`Current Video fetched: ${currentImage}`);
+  const videoFile = path.join(__dirname, `${BASE_ASSETS}${currentImage}`);
+  res.sendFile(videoFile, {}, (err) => {
     if (err)
       console.log(`unable to fetch image, with: ${err}`);
   });

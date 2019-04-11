@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Almoni Tzar AAA';
+    src: url('AlmoniTzarAAA.woff2') format('woff2'),
+        url('AlmoniTzarAAA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almoni DL AAA';
+    src: url('AlmoniDLAAA-Bold.woff2') format('woff2'),
+        url('AlmoniDLAAA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almoni Tzar AAA';
+    src: url('AlmoniTzarAAA-Light.woff2') format('woff2'),
+        url('AlmoniTzarAAA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almoni DL AAA';
+    src: url('AlmoniDLAAA-Light.woff2') format('woff2'),
+        url('AlmoniDLAAA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almoni DL AAA';
+    src: url('AlmoniDLAAA-Black.woff2') format('woff2'),
+        url('AlmoniDLAAA-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almoni DL AAA';
+    src: url('AlmoniDLAAA.woff2') format('woff2'),
+        url('AlmoniDLAAA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almoni DL AAA';
+    src: url('AlmoniDLAAA-Black.woff2') format('woff2'),
+        url('AlmoniDLAAA-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almoni DL AAA';
+    src: url('AlmoniDLAAA.woff2') format('woff2'),
+        url('AlmoniDLAAA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

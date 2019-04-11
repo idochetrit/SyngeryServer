@@ -1,0 +1,89 @@
+﻿body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Assistant', sans-serif; }
+  body a {
+    text-decoration: none;
+    color: #2d2d2d; }
+  body .box {
+    position: relative;
+    padding: 0;
+    width: 980px;
+    display: inline-block;
+    max-height: 225px; }
+    body .box .title {
+      background-color: #36274D;
+      padding: 1px 4px;
+      height: 22px; }
+      body .box .title .logo {
+        max-height: 24px;
+        text-align: right; }
+        body .box .title .logo a {
+          text-decoration: none;
+          color: #2d2d2d; }
+  body .owl-carousel {
+    width: 980px;
+    float: left;
+    margin: 16px 0 0 0; }
+    body .owl-carousel .owl-stage-outer {
+      margin: 0 4px 0 6px; }
+    body .owl-carousel .item {
+      border: none;
+      margin: 0 0 !important;
+      background-image: url(https://www.getit.co.il/market/image/comp/box.png);
+      height: 184px;
+      width: 184px; }
+      body .owl-carousel .item .product-image-container {
+        text-align: center;
+        margin: 0; }
+        body .owl-carousel .item .product-image-container img {
+          display: inline;
+          width: auto;
+          height: 104px;
+          margin: 4px 0 0 0; }
+      body .owl-carousel .item .right-block {
+        margin-top: -3px; }
+        body .owl-carousel .item .right-block .caption {
+          direction: rtl;
+          text-align: center;
+          padding: 4px 8px;
+          height: 32px;
+          overflow: hidden; }
+          body .owl-carousel .item .right-block .caption a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 16px;
+            direction: rtl;
+            text-align: center; }
+        body .owl-carousel .item .right-block .price {
+          direction: rtl;
+          text-align: center;
+          color: #fff;
+          font-size: 26px;
+          font-weight: bold;
+          line-height: 36px; }
+          body .owl-carousel .item .right-block .price a {
+            color: #fff; }
+  body .control {
+    border: none;
+    width: 29px;
+    height: 29px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    margin: 94px 0;
+    position: absolute;
+    z-index: 100; }
+    body .control a {
+      line-height: 29px;
+      font-weight: bold; }
+    body .control.control-next {
+      float: right;
+      right: 0; }
+    body .control.control-prev {
+      float: left;
+      left: 0; }
+  body .owl-nav {
+    display: none; }
+

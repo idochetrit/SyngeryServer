@@ -1,0 +1,1 @@
+googletag.impl.pubads.callbackProxy2([{"/6870/ynt.sargel.Central":{"_type_":"html","_expandable_":false,"_afc_expandable_":false,"_html_":"","_snippet_":false,"_height_":50,"_width_":320,"_empty_":true,"_is_afc_":false,"_is_3pas_":false,"_pvtoken_":"","_qqid_":"CIvW2_LSyOECFRLk7QodxTENsA","_pvtoken_lifetime_":-1}}]);
