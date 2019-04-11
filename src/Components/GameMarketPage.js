@@ -94,6 +94,36 @@ class GameMarketPage extends Component {
                     <input type="checkbox" className="form-check-input" id="ageRanges2" />
                     <label className="form-check-label" forhtml="ageRanges2">סטודנטים</label>
                   </div>
+                  <div className="form-check form-check-inline">
+                    <input type="checkbox" className="form-check-input" id="ageRanges2" />
+                    <label className="form-check-label" forhtml="ageRanges2">מבוגרים</label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input type="checkbox" className="form-check-input" id="ageRanges2" />
+                    <label className="form-check-label" forhtml="ageRanges2">גיל הזהב</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="form-group form-group-sm col-sm-8">
+              <div className="row">
+                <label forhtml="location" className="col-sm-4 col-form-label">מיקום:</label>
+                <div className="col-sm-8">
+                  <select class="custom-select">
+                    <option selected>בחר מיקום</option>
+                    <option value="1">צפון</option>
+                    <option value="2">דרום</option>
+                    <option value="3">גוש דן</option>
+                    <option value="3">השרון</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div className="form-group form-group-sm col-sm-8">
+              <div className="row">
+                <label forhtml="finance" className="col-sm-4 col-form-label">תקציב:</label>
+                <div className="col-sm-8">
+                  <input className="form-control"id="finance"/>
                 </div>
               </div>
             </div>

@@ -45,8 +45,9 @@ a.nav-link {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #3f3f3f;
-  padding-right: 20px !important;
-  padding-left: 20px !important;
+  font-size: 19px;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .nav-item {
@@ -92,11 +93,12 @@ a.nav-link {
 }
 .btn-orange {
   background-color: rgb(218,140,74);
+  color: white;
 }
 
 .dropzone-wrapper {
   border-style: dashed;
-  height: 250px;
+  height: 150px;
   width: 520px;
   margin: 0 auto;
   border-color: rgb(218,140,74);
@@ -122,7 +124,7 @@ a.nav-link {
 
 .desc-textarea {
   margin: 0 auto;
-  width: 496px;
+  width: 415px;
   padding: 0;
   margin-right: -17px;
 }
