@@ -1727,7 +1727,7 @@ module.exports = function () {
     window.handlecss = function () {
         var defaultcss = document.createElement("style");
         defaultcss.id = "defaultcss";
-        defaultcss.innerHTML = "div[id='ads.premium']{height:auto;clear:both;width:980px;}div[id='ads.top']{padding: 5px; background-color: rgb(233, 233, 233); box-sizing: border-box;margin: 0 auto;width:980px;clear:both;    min-height: auto !important;}";
+        defaultcss.innerHTML = "div[id='ads.premium']{height:auto;clear:both;width:980px;}div[id='ads.top']{padding: 5px; background-color: rgb(233, 233, 233); box-sizing: border-box;margin: 0 auto;width:980px;clear:both; height: 250px;background-size: 100% 100%; background-repeat: no-repeat;background-image: url(/api/game/image); min-height: auto !important;}";
         document.getElementsByTagName("head")[0].appendChild(defaultcss);
     };
     window.Templates = window.Templates || {}; // namespace for Templates

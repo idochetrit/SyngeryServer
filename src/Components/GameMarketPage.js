@@ -24,6 +24,12 @@ class GameMarketPage extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
+    if (this.state.files.length === 0) 
+      return alert("no files found");
+    
+    const file = this.state.files[0];
+    console.log(file);
+    data.append("file", file);
     
     fetch('/api/game/new', {
       method: 'POST',
@@ -34,58 +40,68 @@ class GameMarketPage extends Component {
 
   render () {
     return (
-    <div className="container card upload-image">
+    <div className="container upload-image">
       <div className="row">
-        <div className="col-lg-12 text-center" style={{"paddingBottom": '30px'}}>
-          <h3 className="mt-5">פרסם לקהל היעד שלך</h3>
+        
+          <div className="market-header">
+            <h3>פרסם לקהל היעד שלך</h3>
+          </div>
           <hr />
-          <form>
-            <div className="form-group">
-              <Dropzone onDrop={acceptedFiles => this.onPreviewDrop(acceptedFiles)}>
-                {({getRootProps, getInputProps}) => (
-                  <section>
-                    <div {...getRootProps()} className="dropzone-wrapper">
-                      <input {...getInputProps()} />
-                      <p>Drag 'n' drop some files here</p>
-                    </div>
-                  </section>
-                )}
-              </Dropzone>
-              {this.state.files.length > 0 &&
-              <Fragment>
-                <h3>Previews</h3>
-                {this.state.files.map((file) => (
-                  <img
-                  alt="Preview"
-                  key={file.name}
-                  src={file.preview}
-                  />
-                  ))}
-              </Fragment>
-            }
+          <form className="row col-12 main-form" onSubmit={this.handleSubmit}>
+            <div className="form-group form-group-sm col-sm-8">
+              <div className="row">
+                <label forhtml="dragzone" className="col-sm-4 col-form-label">קובץ:</label>
+                <Dropzone onDrop={acceptedFiles => this.onPreviewDrop(acceptedFiles)}>
+                  {({getRootProps, getInputProps}) => (
+                      <div {...getRootProps()} id="dragzone" className="col-sm-8 dropzone-wrapper">
+                        <input {...getInputProps()} />
+                        {this.state.files.length > 0 ? (
+                          <Fragment>
+                          {this.state.files.map((file) => (
+                            <img
+                            alt="Preview"
+                            key={file.name}
+                            src={file.preview}
+                            />
+                            ))}
+                        </Fragment>) : <p>Drag 'n' drop some files here</p>}
+                      </div>
+                  )}
+                </Dropzone>
+              </div>
             </div>
-              
-            <div className="form-group">
-              <label forhtml="desc">תיאור:</label>
-              <textarea className="form-control desc-textarea" rows="4" id="desc"></textarea>
+            <div className="form-group form-group-sm col-sm-8">
+              <div className="row">
+                <label forhtml="desc" className="col-sm-4 col-form-label">תיאור:</label>
+                <div className="col-sm-8">
+                  <textarea className="form-control desc-textarea" rows="5" id="desc"></textarea>
+                </div>
+              </div>
             </div>
-            <div className="form-check form-check-inline">
-              <input type="checkbox" className="form-check-input" id="ageRanges1" />
-              <label className="form-check-label" forhtml="ageRanges1">ילדים</label>
+            <div className="form-group form-group-sm col-sm-8">
+              <div className="row">
+                <label forhtml="checkboxes" className="col-sm-4 col-form-label">קהל יעד:</label>
+                <div className="col-sm-8" id="checkboxes">
+                  <div className="form-check form-check-inline">
+                    <input type="checkbox" className="form-check-input" id="ageRanges1" />
+                    <label className="form-check-label" forhtml="ageRanges1">ילדים</label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input type="checkbox" className="form-check-input" id="ageRanges2" />
+                    <label className="form-check-label" forhtml="ageRanges2">חיילים</label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input type="checkbox" className="form-check-input" id="ageRanges2" />
+                    <label className="form-check-label" forhtml="ageRanges2">סטודנטים</label>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="form-check form-check-inline">
-              <input type="checkbox" className="form-check-input" id="ageRanges2" />
-              <label className="form-check-label" forhtml="ageRanges2">חיילים</label>
-            </div>
-            <div className="form-check form-check-inline">
-              <input type="checkbox" className="form-check-input" id="ageRanges2" />
-              <label className="form-check-label" forhtml="ageRanges2">סטודנטים</label>
-            </div>
-            <div className="btn-upload col-12 ">
-              <button className="btn btn-warning btn-reset" type="button">פרסם</button>
+            
+            <div className="btn-upload col-12">
+              <button className="btn btn-orange btn-reset" type="submit">פרסם</button>
             </div>
           </form>
-        </div>
       </div>
     </div>);
   }

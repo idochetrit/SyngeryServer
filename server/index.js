@@ -17,12 +17,6 @@ app.use(cors());
 
 
 const defaultRouter = new express.Router();
-defaultRouter.get("/test", function (req, res) {
-  res.json({
-    json: true
-  });
-  
-});
 
 // api routers
 app.use("", defaultRouter);
