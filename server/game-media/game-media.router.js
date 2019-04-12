@@ -48,7 +48,7 @@ router.post("/new", upload.single('file'), function (req, res) {
   fs.writeFileSync(defaultImagePath, fileContent, {
     flag: "w"
   });
-  res.status(204);
+  res.status(200).json({completed: true});
 });
 
 
