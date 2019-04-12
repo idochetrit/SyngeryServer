@@ -30,7 +30,7 @@ class GameMarketPage extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
-    if (this.state.files.length === 0) 
+    if (!this.state.file) 
       return alert("no files found");
     
     fetch('/api/game/new', {
