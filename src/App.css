@@ -98,7 +98,7 @@ a.nav-link {
 
 .dropzone-wrapper {
   border-style: dashed;
-  height: 100px;
+  min-height: 100px;
   width: 500px;
   margin: 0 auto;
   border-color: rgb(218,140,74);

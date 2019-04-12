@@ -8,7 +8,7 @@ class GameMarketPage extends Component {
     super(props);
 
     this.state = {
-      files: [],
+      file: null,
       inputs: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,8 +16,13 @@ class GameMarketPage extends Component {
 
   onPreviewDrop = (files) => {
     console.log(files);
+    
+    const file = files[0];
+    Object.assign(file, {
+      preview: URL.createObjectURL(file)
+    });
     this.setState({
-      files: this.state.files.concat(files),
+      file: file,
      });
   }
 
@@ -33,7 +38,7 @@ class GameMarketPage extends Component {
       body: data,
     });
     this.setState({
-      files: []
+      files: null
     });
     event.target.elements.location.value = "";
     event.target.elements.desc.value = "";
@@ -62,15 +67,13 @@ class GameMarketPage extends Component {
                   {({getRootProps, getInputProps}) => (
                       <div {...getRootProps()} id="dragzone" className="col-sm-8 dropzone-wrapper">
                         <input name="file" {...getInputProps()} />
-                        {this.state.files.length > 0 ? (
+                        {!!this.state.file ? (
                           <Fragment>
-                          {this.state.files.map((file) => (
-                            <img
+                            <img className="img-thumbnail"
                             alt="Preview"
-                            key={file.name}
-                            src={file.preview}
+                            key={this.state.file.name}
+                            src={this.state.file.preview}
                             />
-                            ))}
                         </Fragment>) : <p>Drag 'n' drop some files here</p>}
                       </div>
                   )}
